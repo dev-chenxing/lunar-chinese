@@ -1,0 +1,38 @@
+{
+	"name": "lunar-chinese",
+	"version": "1.0.0",
+	"description": "Chinese calendar date utility library | 无依赖阴历/阳历工具",
+	"keywords": [
+		"chinese",
+		"lunar",
+		"阴历",
+		"农历",
+		"黄历",
+		"date",
+		"time",
+		"calendar"
+	],
+	"license": "MIT",
+	"author": "dev-chenxing",
+	"type": "module",
+	"scripts": {
+		"build": "unbuild",
+		"test": "node test.js"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"devDependencies": {
+		"ansi-colors": "^4.1.3",
+		"typescript": "^5.7.2",
+		"unbuild": "^3.2.0"
+	}
+}

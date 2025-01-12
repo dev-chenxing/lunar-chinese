@@ -1,4 +1,4 @@
-import {ChineseCalendar} from "./ChineseCalendar"
+import { ChineseCalendar } from "./ChineseCalendar"
 
 export {
 	ChineseCalendar

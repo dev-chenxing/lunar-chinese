@@ -1,4 +1,4 @@
-import { MONTHS_EN, MONTHS_ZH } from "./constants"
+import { MONTHS_EN, MONTHS_ZH, WEEKDAYS_EN, WEEKDAYS_ZH } from "./constants"
 
 export class ChineseCalendar {
 	private readonly _date: Date
@@ -17,5 +17,14 @@ export class ChineseCalendar {
 			return MONTHS_ZH[this._date.getMonth()];
 		else
 			return MONTHS_EN[this._date.getMonth()];
+	}
+	getDay({ lang = "en", }: { lang: "en" | "zh" }): string {
+		if (lang == "zh")
+			return WEEKDAYS_ZH[this._date.getDay()];
+		else
+			return WEEKDAYS_EN[this._date.getDay()];
+	}
+	getDate(): number {
+		return this._date.getDate()
 	}
 }

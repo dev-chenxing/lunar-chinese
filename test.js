@@ -4,11 +4,12 @@ import { ChineseCalendar } from "./dist/index.cjs";
 const c = new ChineseCalendar(1948, 8, 24);
 
 const tests = {
-    "c.getMonth({lang: 'en'})": "August",
+    "c.getYear()": 1948,
     "c.getMonth({lang: 'zh'})": "八月",
+    "c.getMonth({lang: 'en'})": "August",
+    "c.getDate()": 24,
     "c.getDay({lang: 'zh'})": "星期二",
     "c.getDay({lang: 'en'})": "Tuesday",
-    "c.getDate()": 24,
 };
 
 Object.keys(tests).forEach((i) => {

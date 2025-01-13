@@ -12,6 +12,9 @@ export class ChineseCalendar {
 			this._date = new Date(year, monthIndex, date);
 		}
 	}
+	getYear(): number {
+		return this._date.getFullYear()
+	}
 	getMonth({ lang = "en", }: { lang: "en" | "zh" }): string {
 		if (lang == "zh")
 			return MONTHS_ZH[this._date.getMonth()];
